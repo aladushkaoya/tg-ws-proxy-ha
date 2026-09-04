@@ -1,9 +1,8 @@
 name: Build and publish
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
   workflow_dispatch:
 
 env:
@@ -22,6 +21,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Get version
+        id: version
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          VERSION="${VERSION#v}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Building version: $VERSION"
+
+      - name: Check app version
+        run: |
+          CONFIG_VERSION=$(sed -nE 's/^version:[[:space:]]*"?([^"]+)"?.*$/\1/p' tg_ws_proxy/config.yaml)
+          RELEASE_VERSION="${{ steps.version.outputs.version }}"
+
+          echo "config.yaml version: $CONFIG_VERSION"
+          echo "release version:    $RELEASE_VERSION"
+
+          if [ "$CONFIG_VERSION" != "$RELEASE_VERSION" ]; then
+            echo "Version mismatch!"
+            exit 1
+          fi
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Login to GHCR
         uses: docker/login-action@v3
         with:
@@ -35,4 +61,5 @@ jobs:
           context: ./tg_ws_proxy
           push: true
           tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.version }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
