@@ -6,7 +6,7 @@ Provides a local Telegram WebSocket proxy running directly on Home Assistant.
 
 ## Installation
 
-[![Open your Home Assistant instance and add this repository](https://my.home-assistant.io/badges/supervisor_store.svg)](https://my.home-assistant.io/redirect/supervisor_store/?repository_url=https%3A%2F%2Fgithub.com%2Faladushkaoya%2Ftg-ws-proxy-ha)
+[![Open your Home Assistant instance and add this repository](https://my.home-assistant.io/badges/supervisor_store.svg)]([https://my.home-assistant.io/redirect/supervisor_store/?repository_url=https%3A%2F%2Fgithub.com%2Faladushkaoya%2Ftg-ws-proxy-ha](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Faladushkaoya%2Ftg-ws-proxy-ha))
 
 Or manually add this repository to Home Assistant:
 
