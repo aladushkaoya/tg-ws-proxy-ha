@@ -2,7 +2,7 @@
 
 
 
-Home Assistant App for https://github.com/Flowseal/tg-ws-proxy.
+Home Assistant App for \[Flowseal/tg-ws-proxy](https://github.com/Flowseal/tg-ws-proxy).
 
 
 
@@ -22,7 +22,7 @@ Or manually add this repository to Home Assistant:
 
 
 
-https://github.com/aladushkaoya/tg-ws-proxy-ha
+\[https://github.com/aladushkaoya/tg-ws-proxy-ha](https://github.com/aladushkaoya/tg-ws-proxy-ha)
 
 
 
@@ -54,11 +54,11 @@ You can find the generated secret in the App logs. Alternatively, after starting
 
 
 
-This App packages https://github.com/Flowseal/tg-ws-proxy.
+This App packages \[Flowseal/tg-ws-proxy](https://github.com/Flowseal/tg-ws-proxy).
 
 
 
-\[my-ha-badge]: https://my.home-assistant.io/badges/supervisor\_add\_repository.svg
+\[my-ha-badge]: https://my.home-assistant.io/badges/supervisor\_store.svg
 
-\[my-ha-url]: https://my.home-assistant.io/redirect/supervisor\_add\_addon\_repository/?repository\_url=https://github.com/aladushkaoya/tg-ws-proxy-ha
+\[my-ha-url]: https://my.home-assistant.io/redirect/supervisor\_add\_addon\_repository/?repository\_url=https%3A%2F%2Fgithub.com%2Faladushkaoya%2Ftg-ws-proxy-ha
 
