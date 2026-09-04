@@ -1,7 +1,8 @@
 name: TG WS Proxy
 slug: tg_ws_proxy
-description: HA App for run instance of Local MTProto proxy for Telegram (tg-ws-proxy)
-version: "1.0.0"
+description: Home Assistant App for Flowseal's Telegram WebSocket Proxy (tg-ws-proxy)
+version: "1.0.1"
+image: ghcr.io/aladushkaoya/tg-ws-proxy-ha:latest
 
 arch:
   - amd64
