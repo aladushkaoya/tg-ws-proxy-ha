@@ -1,0 +1,31 @@
+name: TG WS Proxy
+slug: tg_ws_proxy
+description: HA App for run instance of Local MTProto proxy for Telegram (tg-ws-proxy)
+version: "1.0.0"
+
+arch:
+  - amd64
+  - aarch64
+
+startup: services
+boot: auto
+init: false
+
+ports:
+  1443/tcp: 1443
+
+options:
+  host: "0.0.0.0"
+  port: 1443
+  secret: ""
+  pool_size: 8
+  buf_kb: 512
+  verbose: false
+
+schema:
+  host: str
+  port: port
+  secret: str
+  pool_size: int
+  buf_kb: int
+  verbose: bool
