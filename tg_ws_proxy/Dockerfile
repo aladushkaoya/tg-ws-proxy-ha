@@ -8,7 +8,7 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 
-ARG TG_WS_PROXY_VERSION=1.11.2
+ARG TG_WS_PROXY_VERSION=1.11.3
 
 RUN git clone \
     --depth 1 \
